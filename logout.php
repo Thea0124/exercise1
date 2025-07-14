@@ -1,4 +1,5 @@
 <?php
-    setcookie('login',$name_email,time()-60,'/');
+session_start();
+    unset($_SESSION['is_login']);
     header('Location: login.php');
 ?>
