@@ -1,17 +1,12 @@
 <?php
-    if(!isset($_COOKIE['login'])){
-        header('Location: login.php');
+    $price = 5;
+    echo "<table border ='1' class = 'w-[60%] h[40px]'>";
+    echo "<tr><th>QTY</th><th>Total</th></tr>";
+    for($i = 10;$i <=100;$i=$i+10){
+    echo "<tr>
+            <td>$i</td>
+            <td>".$i * $price."</td>
+        </tr>";
     }
+    echo "</table>";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Dashboard</h1>
-    <a href="logout.php">Logout</a>
-</body>
-</html>
